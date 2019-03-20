@@ -1,3 +1,30 @@
+<h1>Top Articles</h1>
+
+<div>
 <% @articles.each do |article| %>
-  <p><%= article.title %></p>
+<h3><a href=<%= article.url%> target="_blank" class="url"><%= article.title %></a></h3><%= article.description %>
+<br>
 <% end %>
+<div>
+
+
+
+<br><br><br>
+<div>
+  <thead id="articles">
+    <tr>
+      <th class="column-1 title">TITLE</th>
+      <th class="column-1 description">DESCRIPTION</th>
+      <th class="column-1 link">VIEW</th>
+    </tr>
+  </thead>
+  <br>
+  <% @articles.each do |article| %>
+  <tbody>
+    <td><%= article.title %></a></td>
+    <td><%= article.description %></td>
+    <td><a href=<%= article.url%> target="_blank" class="url">Link</a></td>
+  <br><br>
+  </tbody>
+  <% end %>
+</div>
